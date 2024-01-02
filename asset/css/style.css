@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root {
+  --first: #242424;
+  --second: #16a085;
+  --third: #1abc9c;
+  --forth: #5b5b5b;
+  --fifth: #efecec;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+/* HEADER SECTON START */
+.headerSection {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+  box-shadow: 30px 0 20px #fff;
+}
+.headerContainer {
+  margin: 0 auto;
+  max-width: 60rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.headerLogo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--second);
+}
+
+.headerMenu ul {
+  display: flex;
+  align-items: center;
+}
+.headerMenu ul li a {
+  margin: 0 1rem;
+  font-weight: 700;
+  color: var(--firstColor);
+  position: relative;
+}
+.contactLink {
+  display: inline-block;
+  background-color: var(--second);
+  color: #fff !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.8rem;
+  transition: 0.3s;
+}
+.technologiesLink::after,
+.projectsLink::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 0;
+  bottom: -20%;
+  right: 0;
+  background-color: var(--first);
+  transition: 0.3s;
+}
+.technologiesLink:hover::after,
+.projectsLink:hover::after {
+  width: 100%;
+  left: 0;
+}
+.contactLink:hover {
+  background-color: var(--third);
+}
+
+/* HEADER SECTON END */
+
+/* ABOUT SECTION START */
+.aboutSection {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.aboutContainer {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* transform: translateY(-20%); */
+  text-align: center;
+  gap: 1rem;
+}
+.aboutImageMask {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.315);
+}
+.aboutImageMask img {
+  transform: scale(1.4) translateX(10%);
+}
+.aboutContainer h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+.aboutContainer h2 span {
+  color: var(--second);
+}
+.aboutContainer p {
+  font-size: 1.1rem;
+  line-height: 140%;
+}
+.aboutContainer p span {
+  color: var(--second);
+  font-weight: 700;
+}
+.aboutLink {
+  cursor: pointer;
+}
+.aboutLink a {
+  text-decoration: none;
+  color: var(--first);
+  font-size: 1.4rem;
+  padding: 0 0.4rem;
+  transition: 0.2s;
+}
+.aboutLink a:hover {
+  color: var(--forth);
+}
+/* ABOUT SECTION END */
+
+/* TECHNOLOGIES SECTION START */
+.technologiesSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fifth);
+}
+.technologiesContainer {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+.technologiesTitle {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+.technologiesTitle span {
+  color: var(--second);
+}
+.technologiesRow {
+  display: flex;
+  justify-content: center;
+}
+.iconMask img {
+  transition: 0.3s;
+}
+.iconMask {
+  height: 8rem;
+  width: 8rem;
+  cursor: pointer;
+  margin: 1.4rem 2.4rem;
+  position: relative;
+}
+.iconMask img:hover {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+.iconTitle {
+  color: var(--first);
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  font-weight: 400;
+  font-size: 0;
+  opacity: 0;
+}
+.iconMask:hover .iconTitle {
+  font-size: 1.2rem;
+  opacity: 1;
+}
+.react {
+  height: 7rem;
+  width: 7rem;
+}
+.reactTitle {
+  bottom: -10%;
+}
+/* TECHNOLOGIES SECTION END */
+
+/* PROJECT SECTION START */
+.projectContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.projectTitle {
+  padding: 2rem 0;
+  text-align: center;
+}
+.projectTitle h2 {
+  font-size: 2.4rem;
+}
+.projectTitle h2 span {
+  color: var(--second);
+}
+.projectItem {
+  padding: 4rem 0;
+}
+.projectItem:first-child {
+  padding-top: 2rem;
+}
+.projectMask {
+  box-shadow: 0px 20px 80px #0000006c;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.projectMask img {
+  transition: 0.3s;
+}
+.projectMask:hover img {
+  filter: blur(5px);
+  transform: scale(1.03);
+}
+.projectDescription {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.488);
+  opacity: 0;
+  transition: 0.3s;
+}
+.projectMask:hover .projectDescription {
+  opacity: 1;
+  height: 100%;
+}
+.projectDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+.projectDescription h2 {
+  margin-left: 4rem;
+  font-size: 2.4rem;
+}
+.projectDescription h3 {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+.projectDescription p {
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  margin-right: 3rem;
+}
+.projectLink a {
+  margin-left: 4rem;
+  color: #ffffff;
+  display: inline-block;
+  padding: 3px 4px;
+  font-weight: 700;
+  transition: 0.3s;
+  position: relative;
+}
+.projectLink a:hover {
+  color: blue;
+}
+.projectLink a::before {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  bottom: -20%;
+  right: 0;
+  background-color: #ffffff;
+}
+.projectLink a:hover::before {
+  width: 0%;
+}
+.projectLink a::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 0;
+  bottom: -20%;
+  right: 0;
+  background-color: blue;
+  transition: 0.3s;
+}
+.projectLink a:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* PROJECT SECTION END */
+
+/* FOOTER SECTION START */
+.footerSection {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--first);
+}
+.footerContainer p {
+  color: #fff;
+}
+.footerContainer p span {
+  font-weight: 700;
+}
+/* FOOTER SECTION START */
